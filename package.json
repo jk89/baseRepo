@@ -1,0 +1,34 @@
+{
+  "name": "base-repo",
+  "version": "0.1.0",
+  "engines": { "node": "8" },
+  "description": "",
+  "main": "./lib/index.js",
+  "module": "./lib/index.js",
+  "typings": "./lib/index.d.ts",
+  "keywords": [
+    "library",
+    "typescript"
+  ],
+  "author": {
+    "name": "Jonathan Kelsey"
+  },
+  "scripts": {
+    "build": "npm run tslint && tsc --declaration",
+    "tslint": "tslint -c tslint.json -p tsconfig.json",
+    "ci": "npm run lint && npm run test && npm run build && npm run docs"
+  },
+  "dependencies": {
+    "dep-repo-1": "git+https://github.com/jk89/depRepo1.git",
+    "dep-repo-2": "git+https://github.com/jk89/depRepo2.git",
+    "express": "^4.16.3",
+    "firebase-admin": "^6.0.0",
+    "firebase-functions": "^2.0.5"
+  },
+  "peerDependencies": {},
+  "devDependencies": {
+    "@types/express": "^4.16.0",
+    "tslint": "^5.11.0",
+    "typescript": "^3.1.1"
+  }
+}
